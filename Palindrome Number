@@ -1,0 +1,19 @@
+bool isPalindrome(int x)
+{
+    int og=x;
+    long long reverse=0;
+    while(og)
+    {
+        reverse=og%10 + reverse*10;
+        og=og/10;
+    }
+    if(x<0)
+    {
+      reverse=reverse*(-1);  
+    }
+    if(reverse==x)
+    {
+        return true;
+    }
+    return false;   
+}
